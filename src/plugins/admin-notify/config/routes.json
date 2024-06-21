@@ -1,0 +1,13 @@
+
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/api/product/product",
+      "handler": "myplugin.mycontroller.myaction",
+      "config": {
+        "policies": ["my-plugin.myCustomMiddleware"]
+      }
+    }
+  ]
+}
