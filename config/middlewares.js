@@ -18,4 +18,11 @@ module.exports = [
       conf: {},
     },
   },
+  {
+    resolve: './src/plugins/admin-notify/server/middlewares/index',
+    config: {
+      enabled: true,
+      conf: {},
+    },
+  },
 ];

@@ -17,6 +17,7 @@ export default {
       },
       Component: async () => {
         const component = await import('./pages/App');
+      console.log('pluginId', pluginId);
 
         return component;
       },
@@ -42,6 +43,8 @@ export default {
       locales.map((locale) => {
         return import(`./translations/${locale}.json`)
           .then(({ default: data }) => {
+        console.log('locale', locale);
+
             return {
               data: prefixPluginTranslations(data, pluginId),
               locale,
